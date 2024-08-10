@@ -2,9 +2,9 @@ import "./App.css";
 
 import { makePerson, makeSuperPerson } from "./utils/actions";
 
-const people = [];
+const people: (string | number)[] = [];
 
-const superPeople = [];
+const superPeople: (string | number)[] = [];
 
 const bob = makePerson("Bobalina", 39, 55);
 
