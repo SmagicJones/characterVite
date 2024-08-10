@@ -34,7 +34,17 @@ const megaClaire = makeSuperPerson(
   "Confusion Spell"
 );
 
+const megaJack = makeSuperPerson(
+  "Jacked Jack",
+  32,
+  25000,
+  8989,
+  "Pass out",
+  "fart spray"
+);
+
 superPeople.push(megaClaire);
+superPeople.push(megaJack);
 
 function App() {
   return (
@@ -58,9 +68,12 @@ function App() {
         </div>
 
         <section className="grid md:grid-cols-2 gap-4 pt-4 m-2">
-          {people.map((person) => {
+          {people.map((person, index) => {
             return (
-              <div className="bg-slate-500 rounded-xl text-white p-4">
+              <div
+                key={index}
+                className="bg-slate-500 rounded-xl text-white p-4"
+              >
                 <div className="text-center">
                   <h3 className="text-4xl">{person.name}</h3>
                   <hr />
@@ -69,13 +82,13 @@ function App() {
                 <div className="p-2">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl">Character Age:</h3>
+                      <h3 className="text-2xl">Age:</h3>
                     </div>
                     <div className="bg-white rounded-xl text-black p-4">
                       <h3 className="text-2xl">{person.age}</h3>
                     </div>
                     <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl">Character Level:</h3>
+                      <h3 className="text-2xl">Level:</h3>
                     </div>
                     <div className="bg-white rounded-xl text-black p-4">
                       <h3 className="text-2xl">{person.level}</h3>
@@ -95,9 +108,13 @@ function App() {
           </div>
         </div>
         <section className="grid md:grid-cols-2 gap-4 pt-4 m-2">
-          {superPeople.map((person) => {
+          {superPeople.map((person, index) => {
+            person.bosh();
             return (
-              <div className="bg-slate-500 rounded-xl text-white p-4">
+              <div
+                key={index}
+                className="bg-slate-500 rounded-xl text-white p-4"
+              >
                 <div className="text-center">
                   <h3 className="text-4xl">{person.name}</h3>
                   <hr />
@@ -106,16 +123,34 @@ function App() {
                 <div className="p-2">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl">Character Age:</h3>
+                      <h3 className="text-2xl">Age:</h3>
                     </div>
                     <div className="bg-white rounded-xl text-black p-4">
                       <h3 className="text-2xl">{person.age}</h3>
                     </div>
                     <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl">Character Level:</h3>
+                      <h3 className="text-2xl">Level:</h3>
                     </div>
                     <div className="bg-white rounded-xl text-black p-4">
                       <h3 className="text-2xl">{person.level}</h3>
+                    </div>
+                    <div className="bg-white rounded-xl text-black p-4">
+                      <h3 className="text-2xl">Power:</h3>
+                    </div>
+                    <div className="bg-white rounded-xl text-black p-4">
+                      <h3 className="text-2xl">{person.power}</h3>
+                    </div>
+                    <div className="bg-white rounded-xl text-black p-4">
+                      <h3 className="text-2xl">Special Move:</h3>
+                    </div>
+                    <div className="bg-white rounded-xl text-black p-4">
+                      <h3 className="text-2xl">{person.special}</h3>
+                    </div>
+                    <div className="bg-white rounded-xl text-black p-4">
+                      <h3 className="text-2xl">Armour:</h3>
+                    </div>
+                    <div className="bg-white rounded-xl text-black p-4">
+                      <h3 className="text-2xl">{person.armour}</h3>
                     </div>
                   </div>
                 </div>
