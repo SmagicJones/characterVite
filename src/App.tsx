@@ -6,6 +6,7 @@ interface Character {
   name: string;
   age: number;
   level: number;
+  speak(): void;
 }
 
 interface SuperCharacter {
@@ -15,6 +16,7 @@ interface SuperCharacter {
   power: number;
   special: string;
   armour: string;
+  bosh(): void;
 }
 
 const people: Character[] = [];
