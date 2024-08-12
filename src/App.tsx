@@ -95,7 +95,9 @@ function App() {
                   className="bg-slate-500 rounded-xl text-white p-4"
                 >
                   <div className="text-center">
-                    <h3>{person.name}</h3>
+                    <h3 className="lg:text-8xl md:text-4xl sm:text-2xl">
+                      {person.name}
+                    </h3>
                     <hr />
                   </div>
 
@@ -112,10 +114,14 @@ function App() {
                         </h3>
                       </div>
                       <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
-                        <h3 className="text-2xl">Level:</h3>
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          Level:
+                        </h3>
                       </div>
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl sm:text-xl">{person.level}</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          {person.level}
+                        </h3>
                       </div>
                     </div>
                   </div>
@@ -127,7 +133,7 @@ function App() {
           <div className="grid grid-cols-1 m-2">
             <div className="bg-slate-500 rounded-xl text-white p-4">
               <div className="text-center">
-                <h3 className="text-4xl sm:text-2xl">Super Characters</h3>
+                <h3 className="lg:text-4xl md:text-2xl">Super Characters</h3>
               </div>
             </div>
           </div>
@@ -140,41 +146,63 @@ function App() {
                   className="bg-slate-500 rounded-xl text-white p-4"
                 >
                   <div className="text-center">
-                    <h3 className="lg:text-4xl sm:text-2xl">{person.name}</h3>
+                    <h3 className="lg:text-8xl md:text-4xl sm:text-2xl">
+                      {person.name}
+                    </h3>
                     <hr />
                   </div>
 
                   <div className="p-2">
                     <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl">Age:</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          Age:
+                        </h3>
                       </div>
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl sm:text-xl">{person.age}</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          {person.age}
+                        </h3>
                       </div>
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl sm:text-xl">Level:</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          Level:
+                        </h3>
                       </div>
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl sm:text-xl">{person.level}</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          {person.level}
+                        </h3>
                       </div>
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl sm:text-xl">Power:</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          Power:
+                        </h3>
                       </div>
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl sm:text-xl">{person.power}</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          {person.power}
+                        </h3>
                       </div>
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl sm:text-xl">Special Move:</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          Special Move:
+                        </h3>
                       </div>
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl">{person.special}</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          {person.special}
+                        </h3>
                       </div>
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl sm:text-xl">Armour:</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          Armour:
+                        </h3>
                       </div>
-                      <div className="bg-white rounded-xl text-black p-4">
-                        <h3 className="text-2xl sm:text-xl">{person.armour}</h3>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          {person.armour}
+                        </h3>
                       </div>
                     </div>
                   </div>
