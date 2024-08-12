@@ -2,9 +2,24 @@ import "./App.css";
 
 import { makePerson, makeSuperPerson } from "./utils/actions";
 
-const people: (string | number)[] = [];
+interface Character {
+  name: string;
+  age: number;
+  level: number;
+}
 
-const superPeople: (string | number)[] = [];
+interface SuperCharacter {
+  name: string;
+  age: number;
+  level: number;
+  power: number;
+  special: string;
+  armour: string;
+}
+
+const people: Character[] = [];
+
+const superPeople: SuperCharacter[] = [];
 
 const bob = makePerson("Bobalina", 39, 55);
 
