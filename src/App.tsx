@@ -1,5 +1,6 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { SyntheticEvent } from "react";
 
 import { makePerson, makeSuperPerson } from "./utils/actions";
 
@@ -70,7 +71,7 @@ function App() {
   const [level, setLevel] = useState("");
   const array: string[] = [];
 
-  function handleSubmit(e) {
+  function handleSubmit(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
     e.preventDefault();
     array.push(name, age, level);
     const strName = array[0];
