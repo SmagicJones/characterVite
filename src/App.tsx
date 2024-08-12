@@ -66,116 +66,124 @@ superPeople.push(megaJack);
 function App() {
   return (
     <>
-      <header className="m-2">
-        <div className="grid grid-cols-1">
-          <div className="bg-slate-500 rounded-xl text-white p-4">
-            <div className="text-center">
-              <h1 className="text-8xl sm:text-3xl">Characters</h1>
+      <div className="full-size">
+        <header className="m-2">
+          <div className="grid grid-cols-1">
+            <div className="bg-slate-500 rounded-xl text-white p-4">
+              <div className="text-center">
+                <h1 className="lg:text-8xl md:text-4xl sm:text-3xl">
+                  Characters
+                </h1>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
-      <main>
-        <div className="grid grid-cols-1 m-2">
-          <div className="bg-slate-500 rounded-xl text-white p-4">
-            <div className="text-center">
-              <h3 className="text-4xl sm:text-2xl">Normal Characters</h3>
+        </header>
+        <main>
+          <div className="grid grid-cols-1 m-2">
+            <div className="bg-slate-500 rounded-xl text-white p-4">
+              <div className="text-center">
+                <h3 className="lg:text-4xl md:text-2xl">Normal Characters</h3>
+              </div>
             </div>
           </div>
-        </div>
 
-        <section className="grid md:grid-cols-2 gap-4 pt-4 m-2">
-          {people.map((person, index) => {
-            return (
-              <div
-                key={index}
-                className="bg-slate-500 rounded-xl text-white p-4"
-              >
-                <div className="text-center">
-                  <h3 className="text-4xl">{person.name}</h3>
-                  <hr />
-                </div>
+          <section className="grid md:grid-cols-2 gap-4 pt-4 m-2">
+            {people.map((person, index) => {
+              return (
+                <div
+                  key={index}
+                  className="bg-slate-500 rounded-xl text-white p-4"
+                >
+                  <div className="text-center">
+                    <h3>{person.name}</h3>
+                    <hr />
+                  </div>
 
-                <div className="p-2">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl">Age:</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl sm:text-1xl">{person.age}</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl">Level:</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl sm:text-xl">{person.level}</h3>
+                  <div className="p-2">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          Age:
+                        </h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center">
+                        <h3 className="lg:text-2xl md:text-xl sm:text-md">
+                          {person.age}
+                        </h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4 flex justify-center items-center">
+                        <h3 className="text-2xl">Level:</h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl sm:text-xl">{person.level}</h3>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </section>
+              );
+            })}
+          </section>
 
-        <div className="grid grid-cols-1 m-2">
-          <div className="bg-slate-500 rounded-xl text-white p-4">
-            <div className="text-center">
-              <h3 className="text-4xl sm:text-2xl">Super Characters</h3>
+          <div className="grid grid-cols-1 m-2">
+            <div className="bg-slate-500 rounded-xl text-white p-4">
+              <div className="text-center">
+                <h3 className="text-4xl sm:text-2xl">Super Characters</h3>
+              </div>
             </div>
           </div>
-        </div>
-        <section className="grid md:grid-cols-2 gap-4 pt-4 m-2">
-          {superPeople.map((person, index) => {
-            person.bosh();
-            return (
-              <div
-                key={index}
-                className="bg-slate-500 rounded-xl text-white p-4"
-              >
-                <div className="text-center">
-                  <h3 className="text-4xl sm:text-2xl">{person.name}</h3>
-                  <hr />
-                </div>
+          <section className="grid md:grid-cols-2 gap-4 pt-4 m-2">
+            {superPeople.map((person, index) => {
+              person.bosh();
+              return (
+                <div
+                  key={index}
+                  className="bg-slate-500 rounded-xl text-white p-4"
+                >
+                  <div className="text-center">
+                    <h3 className="lg:text-4xl sm:text-2xl">{person.name}</h3>
+                    <hr />
+                  </div>
 
-                <div className="p-2">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl">Age:</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl sm:text-xl">{person.age}</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl sm:text-xl">Level:</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl sm:text-xl">{person.level}</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl sm:text-xl">Power:</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl sm:text-xl">{person.power}</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl sm:text-xl">Special Move:</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl">{person.special}</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl sm:text-xl">Armour:</h3>
-                    </div>
-                    <div className="bg-white rounded-xl text-black p-4">
-                      <h3 className="text-2xl sm:text-xl">{person.armour}</h3>
+                  <div className="p-2">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl">Age:</h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl sm:text-xl">{person.age}</h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl sm:text-xl">Level:</h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl sm:text-xl">{person.level}</h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl sm:text-xl">Power:</h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl sm:text-xl">{person.power}</h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl sm:text-xl">Special Move:</h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl">{person.special}</h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl sm:text-xl">Armour:</h3>
+                      </div>
+                      <div className="bg-white rounded-xl text-black p-4">
+                        <h3 className="text-2xl sm:text-xl">{person.armour}</h3>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </section>
-      </main>
+              );
+            })}
+          </section>
+        </main>
+      </div>
     </>
   );
 }
