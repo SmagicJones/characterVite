@@ -11,6 +11,12 @@ interface Character {
   speak(): void;
 }
 
+interface Characters {
+  name: string;
+  age: number;
+  level: number;
+}
+
 interface SuperCharacter {
   name: string;
   age: number;
@@ -22,6 +28,8 @@ interface SuperCharacter {
 }
 
 const people: Character[] = [];
+
+const peoples: Characters[] = [];
 
 const superPeople: SuperCharacter[] = [];
 
@@ -65,22 +73,39 @@ const megaJack = makeSuperPerson(
 superPeople.push(megaClaire);
 superPeople.push(megaJack);
 
+interface Thing {
+  name: string;
+  age: number;
+}
+
 function App() {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [level, setLevel] = useState("");
-  const array: string[] = [];
+  const [newCharacter, setNewCharacter] = useState<Characters>({
+    name: "",
+    age: 0,
+    level: 0,
+  });
 
   function handleSubmit(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
     e.preventDefault();
-    array.push(name, age, level);
-    const strName = array[0];
-    const ageNum = Number(array[1]);
-    const levelNum = Number(array[2]);
-    const newPerson = makePerson(strName, ageNum, levelNum);
-    people.push(newPerson);
-    console.log(people);
+    peoples.push(newCharacter);
+    console.log(peoples);
   }
+
+  // const [name, setName] = useState("");
+  // const [age, setAge] = useState("");
+  // const [level, setLevel] = useState("");
+  // const array: string[] = [];
+
+  // function handleSubmit(e: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
+  //   e.preventDefault();
+  //   array.push(name, age, level);
+  //   const strName = array[0];
+  //   const ageNum = Number(array[1]);
+  //   const levelNum = Number(array[2]);
+  //   const newPerson = makePerson(strName, ageNum, levelNum);
+  //   people.push(newPerson);
+  //   console.log(people);
+  // }
 
   return (
     <>
@@ -120,7 +145,10 @@ function App() {
                       id="name"
                       type="text"
                       onChange={(e) => {
-                        setName(e.target.value);
+                        setNewCharacter((prev) => ({
+                          ...prev,
+                          name: e.target.value,
+                        }));
                       }}
                     />
                     <div className="flex justify-center items-center">
@@ -135,7 +163,10 @@ function App() {
                       id="age"
                       type="text"
                       onChange={(e) => {
-                        setAge(e.target.value);
+                        setNewCharacter((prev) => ({
+                          ...prev,
+                          age: Number(e.target.value),
+                        }));
                       }}
                     />
                     <div className="flex justify-center items-center">
@@ -150,7 +181,10 @@ function App() {
                       id="level"
                       type="text"
                       onChange={(e) => {
-                        setLevel(e.target.value);
+                        setNewCharacter((prev) => ({
+                          ...prev,
+                          level: Number(e.target.value),
+                        }));
                       }}
                     />
                     <div></div>
